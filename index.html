@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan's project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/uikit.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/uikit.min.js" defer></script>
+    <script src="js/uikit-icons.min.js" defer></script>
+</head>
+
+<body>
+
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+
+            <ul class="uk-navbar-nav">
+                <li class="uk-active"><a href="#">MIR4 tools</a></li>
+                <li>
+                    <a href="#">Calculator</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li><a href="#">Red project</a></li>
+                            <li><a href="#">Exp calculator</a></li>
+                            <li><a href="#">Computer build</a></li>
+                            <li><a href="#">#</a></li>
+                            <li><a href="#">#</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Under construction</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="uk-container">
+
+        <div uk-grid>
+            <div class="uk-width-1-2">
+
+
+                <img src="imgs/arma.png" class="img-icon" alt="">
+                <progress class="uk-progress" value="" max="100"></progress>
+
+                <legend class="uk-legend">Cantidades Epicas</legend>
+                <div class="uk-flex-inline">
+                    <div class="img-container">
+                        <img src="imgs/acero-e.png" class="img-icon" alt="">
+                        <span class="img-text uk-position-bottom-center"><strong name="acero-e">0</strong> / 300</span>
+                    </div>
+                    <div class="img-container">
+                        <img src="imgs/evilminded-e.png" class="img-icon" alt="">
+                        <span class="img-text uk-position-bottom-center"><strong name="evil-e">0</strong> / 100</span>
+                    </div>
+                    <div class="img-container">
+                        <img src="imgs/moonshadow-e.png" class="img-icon" alt="">
+                        <span class="img-text uk-position-bottom-center"><strong name="moon-e">0</strong> / 100</span>
+                    </div>
+                    <div class="img-container">
+                        <img src="imgs/escama-e.png" class="img-icon" alt="">
+                        <span class="img-text uk-position-bottom-center"><strong>0</strong> / 1</span>
+                    </div>
+                </div>
+                <hr class="uk-divider-icon">
+                <legend class="uk-legend">Cantidades Raras</legend>
+                <div class="uk-flex-inline">
+                    <div class="img-container">
+                        <img src="imgs/acero-r.png" class="img-icon" alt="">
+                        <span class="img-text uk-position-bottom-center"><strong name="acero-r">0</strong> / 3000</span>
+                    </div>
+                    <div class="img-container">
+                        <img src="imgs/evilminded-r.png" class="img-icon" alt="">
+                        <span class="img-text uk-position-bottom-center"><strong name="evil-r">0</strong> / 1000</span>
+                    </div>
+                    <div class="img-container">
+                        <img src="imgs/moonshadow-r.png" class="img-icon" alt="">
+                        <span class="img-text uk-position-bottom-center"><strong name="moon-r">0</strong> / 1000</span>
+                    </div>
+                </div>
+
+                <hr class="uk-divider-icon">
+
+                <legend class="uk-legend">Cantidades Comunes</legend>
+                <div class="uk-flex-inline">
+                    <div class="img-container">
+                        <img src="imgs/acero-uc.png" class="img-icon" alt="">
+                        <span class="img-text uk-position-bottom-center"><strong name="acero-uc">0</strong> / 30000</span>
+                    </div>
+                    <div class="img-container">
+                        <img src="imgs/evilminded-uc.png" class="img-icon" alt="">
+                        <span class="img-text uk-position-bottom-center"><strong name="evil-uc">0</strong> / 10000</span>
+                    </div>
+                    <div class="img-container">
+                        <img src="imgs/moonshadow-uc.png" class="img-icon" alt="">
+                        <span class="img-text uk-position-bottom-center"><strong name="moon-uc">0</strong> / 10000</span>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="uk-width-1-2">
+                <legend class="uk-legend uk-margin">Recursos necesarios</legend>
+                <div id="precios" class="uk-flex uk-flex-between uk-flex-stretch">
+                    <div class="img-container">
+                        <img src="imgs/cobre.png" class="img-icon" alt="">
+                        <span name="cobre">0</span>
+                    </div>
+                    <div class="img-container">
+                        <img src="imgs/polvo.png" width="40" height="40" class="img-icon" alt="">
+                        <span name="polvo">0</span>
+                    </div>
+                    <div class="img-container">
+                        <img src="imgs/ds.png" class="img-icon" alt="">
+                        <span name="ds">0</span>
+                    </div>
+                </div>
+                <form>
+                    <legend class="uk-legend uk-margin-top">Cantidades Epicas</legend>
+                    <div class="uk-flex uk-flex-between uk-flex-middle" name="img-epicas">
+                        <div>
+                            <label class="uk-form-label" for="acero-e">Acero [E]</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="acero-e" data-type="acero" type="number" min="0" max="300" placeholder="Cantidad">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="uk-form-label" for="evil-e">Evil minded orb [E]</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="evil-e" data-type="evil" type="number" min="0" max="100" placeholder="Cantidad">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="uk-form-label" for="moon-e">Moon Shadow Stone [E]</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="moon-e" data-type="moon" type="number" min="0" max="100" placeholder="Cantidad">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="uk-form-label" for="form-stacked-select">Escama [E]</label>
+                            <div class="uk-form-controls">
+                                <select class="uk-select" id="form-stacked-select">
+                                    <option value="0">No</option>
+                                    <option value="1">Si</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <legend class="uk-legend uk-margin-top">Cantidades Raras</legend>
+                    <div class="uk-flex uk-flex-between uk-flex-middle" name="img-raras">
+                        <div>
+                            <label class="uk-form-label" for="acero-r">Acero [R]</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="acero-r" data-type="acero" type="number" min="0" max="3000" placeholder="Cantidad">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="uk-form-label" for="evil-r">Evil minded orb [R]</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="evil-r" data-type="evil" type="number" min="0" max="1000" placeholder="Cantidad">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="uk-form-label" for="moon-r">Moon Shadow Stone [R]</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="moon-r" data-type="moon" type="number" min="0" max="1000" placeholder="Cantidad">
+                            </div>
+                        </div>
+                    </div>
+
+                    <legend class="uk-legend uk-margin-top">Cantidades comunes</legend>
+                    <div class="uk-flex uk-flex-between uk-flex-middle" name="img-comunes">
+                        <div>
+                            <label class="uk-form-label" for="acero-uc">Acero [U]</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" data-type="acero" type="number" min="0" max="30000" placeholder="Cantidad">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="uk-form-label" for="evil-uc">Evil minded orb [U]</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" data-type="evil" type="number" min="0" max="10000" placeholder="Cantidad">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="uk-form-label" for="moon-uc">Moon Shadow Stone [U]</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" data-type="moon" type="number" min="0" max="10000" placeholder="Cantidad">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="uk-button uk-button-primary uk-margin">Calcular</button>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="js/apps.js"></script>
+
+</body>
+
+</html>
